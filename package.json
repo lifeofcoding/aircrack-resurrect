@@ -1,0 +1,8 @@
+{
+  "name": "aircrack-resurrect",
+  "version": "0.0.1",
+  "description": "A linux & nodejs script that helps continue a john + aircrack wpa2 cracking session",
+  "author": "lifeofcoding",
+  "main": "zombie.js",
+  "dependencies": {}
+}
