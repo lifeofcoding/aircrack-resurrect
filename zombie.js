@@ -2,8 +2,11 @@ const fs = require('fs');
 const { spawn } = require('child_process');
 const { exec } = require('child_process');
 
+//Enter the absolute path of the diretory it should look for files in, they need to be in the same location as the john session .rec files
+const RestoreDir = '/media/removable/STORAGE/Handshakes';
+
 var files = [];
-spawn('find', ['/media/removable/STORAGE/Handshakes', '-type', 'f', '-name', '*.cmd']).stdout.on('data', function(data) {
+spawn('find', [RestoreDir, '-type', 'f', '-name', '*.cmd']).stdout.on('data', function(data) {
   files.push(data.toString());
 }).on('close', function(code) {
   files.forEach((file, idx) => {
